@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/Background">
+
+    <!--Titolo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn On/Off your lights"
+            android:textSize="20dp"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:textColor="@color/Lights_Title"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/modern_lamp"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+    <!-- Testo per la scelta della modalità -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose mode :"
+        android:textSize="17dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="30dp"
+        />
+
+    <!-- Layout per i bottoni -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <!-- Bottone per la modalità automatica -->
+        <Button
+            android:id="@+id/bttLightsModeAuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ButtonBackground"
+            android:text="Auto"
+            android:textSize="15dp"
+            android:textColor="@color/textColor"
+            android:fontFamily="monospace"
+            />
+
+        <!-- Bottone per la modalità manuale -->
+        <Button
+            android:id="@+id/bttLightsModeManual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ButtonBackground"
+            android:text="Manual"
+            android:textSize="15dp"
+            android:textColor="@color/textColor"
+            android:fontFamily="monospace"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+
+    <!-- Testo per la descrizione delle modalità -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Automatic: Lights will follow you around the house"
+        android:textSize="10dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="15dp"
+        />
+
+    <!-- Testo per la descrizione delle modalità -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manual: Turn on/off single lights at your choice"
+        android:textSize="10dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="10dp"
+        />
+
+    <!-- Layout lampada 1 -->
+    <LinearLayout
+        android:id="@+id/ll_Lamp_Switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <!-- Testo per la lampada 1 -->
+        <TextView
+            android:id="@+id/tv_Lamp_Switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lamp 1 :"
+            android:textSize="20dp"
+            android:fontFamily="serif-monospace"
+            android:textColor="@color/textColor"
+            android:layout_marginRight="20dp"
+            />
+
+        <!-- Bottone per accendere e spegnere la lampada 1 -->
+        <Button
+            android:id="@+id/btt_Lamp_Switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ButtonBackground"
+            android:text="Turn On "
+            android:textColor="@color/textColor"
+            android:fontFamily="monospace"
+            />
+
+        <!-- immagine lampada 1 spenta -->
+        <ImageView
+            android:id="@+id/imgLamp1_Off"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/modern_lamp_off"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            />
+
+        <!-- immagine lampada 1 accesa -->
+        <ImageView
+            android:id="@+id/imgLamp1_On"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/modern_lamp"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+
+    <!-- Layout lampada 2 -->
+    <LinearLayout
+        android:id="@+id/ll_Lamp_Switch2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <!-- Testo per la lampada 2 -->
+        <TextView
+            android:id="@+id/tv_Lamp_Switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lamp 2 :"
+            android:textSize="20dp"
+            android:fontFamily="serif-monospace"
+            android:textColor="@color/textColor"
+            android:layout_marginRight="20dp"
+            />
+
+        <!-- Bottone per accendere e spegnere la lampada 2 -->
+        <Button
+            android:id="@+id/btt_Lamp_Switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ButtonBackground"
+            android:text="Turn On "
+            android:textColor="@color/textColor"
+            android:fontFamily="monospace"
+            />
+
+        <!-- immagine lampada 2 spenta -->
+        <ImageView
+            android:id="@+id/imgLamp2_Off"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/modern_lamp_off"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            />
+
+        <!-- immagine lampada 2 accesa -->
+        <ImageView
+            android:id="@+id/imgLamp2_On"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/modern_lamp"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+    <!-- Layout lampada 3 -->
+    <LinearLayout
+        android:id="@+id/ll_Lamp_Switch3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <!-- Testo per la lampada 3 -->
+        <TextView
+            android:id="@+id/tv_Lamp_Switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lamp 3 :"
+            android:textSize="20dp"
+            android:fontFamily="serif-monospace"
+            android:textColor="@color/textColor"
+            android:layout_marginRight="20dp"
+            />
+
+        <!-- Bottone per accendere e spegnere la lampada 3 -->
+        <Button
+            android:id="@+id/btt_Lamp_Switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ButtonBackground"
+            android:text="Turn On "
+            android:textColor="@color/textColor"
+            android:fontFamily="monospace"
+            />
+
+        <!-- immagine lampada 3 spenta -->
+        <ImageView
+            android:id="@+id/imgLamp3_Off"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/modern_lamp_off"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            />
+
+        <!-- immagine lampada 3 accesa -->
+        <ImageView
+            android:id="@+id/imgLamp3_On"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/modern_lamp"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+    <!-- bottone per tornare indietro -->
+    <Button
+        android:id="@+id/bttLightsBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textSize="15dp"
+        android:textColor="@color/textColor"
+        android:fontFamily="monospace"
+        android:clickable="true"
+        android:backgroundTint="@color/ButtonBackground"
+        android:layout_marginTop="185dp"
+        android:layout_marginLeft="100dp"/>
+
+</LinearLayout>
